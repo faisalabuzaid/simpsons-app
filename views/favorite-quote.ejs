@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <title>Simpsons App</title>
+    </header>
+    <main>
+        <section>
+            <% data.forEach(element => { %>
+            <div>
+                <h1><%= element.character %></h1>
+                <p><%= element.quote %></p>
+                <img src="<%=element.image%>" alt="img">
+
+                <form action="/save" method="post">
+                    <button type="submit">Favor character</button>
+                </form>
+            </div>
+            <% }); %>
+        </section>
+    </main>
+</body>
+</html>
