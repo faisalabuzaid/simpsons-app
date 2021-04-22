@@ -16,14 +16,19 @@
                 <a href="/favorite-quote"> Favourite</a>
         </nav>
     </header>
-    <main class="fav">
-            <% data.forEach(element => { %>
-                <section class="<%=element.direction%>">
+    <main>
+        <section>
                 <h1><%= element.character %></h1>
                 <p><%= element.quote %></p>
-                <a href="/quote/<%=element.id%>"><img src="<%=element.image%>" alt="img"></a>
-                </section>
-                    <% }); %>
+                <img src="<%=element.image%>" alt="img">
+                <form method="post" action="/quote/<%=element.id%>?_method=PUT">
+                    <input value="<%=element.quote%>" name="quote" type="text">
+                    <button type="submit">Update Character</button>
+                </form>
+                <form method="post" action="/quote/<%=element.id%>?_method=DELETE">
+                    <button type="submit">Delete Character</button>
+                </form>
+        </section>
     </main>
 </body>
 </html>

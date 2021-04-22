@@ -1,0 +1,93 @@
+*{
+    font-family: sans-serif;
+    color: #fefb1e;
+    background-color: #16a085;
+}
+body, main{
+    background-color: #62C8E4;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+section {
+    padding: 2%;
+    flex-basis: 20%; 
+    margin: 1% 0.5%;
+    position: relative;
+}
+
+.home form {
+    position: absolute;
+    bottom: 3%;
+    left: 35%;
+}
+section img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+    display: block;
+    width: 50%;
+}
+
+.submit{
+    height: 40px;
+    background-color: #62C8E4;
+    border: none;
+    font-weight: bold;
+    margin: 2%;
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    background-color: #62C8E4;
+    text-align: left;
+    font-size: medium;
+}
+
+nav {
+    width: 100%;
+    background-color: #16a085;
+    margin: auto;
+}
+
+nav img {
+    width: 13%;
+}
+
+nav a {
+    float: right;
+    text-decoration: none;
+    margin: 2%;
+}
+
+.Left{
+    float: left;
+    
+    text-align: left;
+}
+
+.Right {
+    float: right;
+    text-align: right;
+}
+.fav section{
+    flex-basis: 40%; 
+}
+
+.fav img{
+    width: 15%;
+}
+
+.Right img{
+    margin-right:inherit;
+}
+
+.Left img{
+    margin-left:inherit;
+}

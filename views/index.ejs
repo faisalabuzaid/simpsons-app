@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <title>Simpsons App</title>
+        <nav>
+                <img src="img/the_simpsons.png" alt="">
+                <a href="/">Home</a>
+                <a href="/favorite-quote"> Favourite</a>
+        </nav>
     </header>
-    <main>
-        <section>
+    <main class="home">
             <% data.forEach(element => { %>
-            <div>
+            <section>
                 <h1 value="<%= element.character %>"><%= element.character %></h1>
                 <p><%= element.quote %></p>
                 <img src="<%=element.image%>" alt="img">
@@ -22,11 +27,10 @@
                     <input type="hidden" name="quote" value="<%= element.quote %>">
                     <input type="hidden" name="image" value="<%= element.image %>">
                     <input type="hidden" name="characterDirection" value="<%= element.characterDirection %>">
-                    <button type="submit">Favor character</button>
+                    <button class="submit" type="submit">Favor character</button>
                 </form>
-            </div>
+            </section>
             <% }); %>
-        </section>
     </main>
 </body>
 </html>
