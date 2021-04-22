@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
 <body>
     <header>
         <nav>
-                <img src="img/the_simpsons.png" alt="">
+                <img src="/img/the_simpsons.png" alt="">
                 <a href="/">Home</a>
                 <a href="/favorite-quote"> Favourite</a>
         </nav>
@@ -22,11 +22,11 @@
                 <p><%= element.quote %></p>
                 <img src="<%=element.image%>" alt="img">
                 <form method="post" action="/quote/<%=element.id%>?_method=PUT">
-                    <input value="<%=element.quote%>" name="quote" type="text">
-                    <button type="submit">Update Character</button>
+                    <textarea name="quote" cols="30" rows="10"> <%=element.quote%> </textarea>
+                    <button class="submit" type="submit">Update Character</button>
                 </form>
                 <form method="post" action="/quote/<%=element.id%>?_method=DELETE">
-                    <button type="submit">Delete Character</button>
+                    <button class="submit" type="submit">Delete Character</button>
                 </form>
         </section>
     </main>
