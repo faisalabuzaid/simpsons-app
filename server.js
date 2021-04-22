@@ -86,17 +86,19 @@ function updateOneQuote(req, res) {
     const id = req.params.id;
     const SQL='UPDATE quotes SET quote=$1 where id=$2';
     client.query(SQL, [req.body.quote, id]).then(data => {
-        getOneQuote(req, res);
+        res.redirect(`../quote/${id}`);
     })
 }
 
 
-function deleteOneQuote(req, res) {
+function deleteOneQuote (req, res) {
     const id = req.params.id;
     const SQL='delete from quotes where id=$1';
-    client.query(SQL, [id]).then(data => {
-       renderFav(req,res);
-    })
+    client.query(SQL, [id]).then(() => {
+        res.redirect('../favorite-quote');
+
+    });
+
 }
 // helper functions
 
